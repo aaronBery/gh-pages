@@ -1,16 +1,21 @@
 
 				</div>
+				
+				{% if page.layout != 'widepage' %}
+				  <div class="site-content__sidebar">
 
-				<div class="site-content__sidebar">
+		                    <h1>Sidebar</h1>
 
-					<h1>Sidebar</h1>
+			              <p>
+				        Supporting content, patterns or related links can be placed in the sidebar
+				      </p>
 
-					<p>Supporting content, patterns or related links can be placed in the sidebar</p>
+				  </div>
 
-				</div>
-
-				<!-- end main slot where silva content gets rendered-->
-
+			          <!-- end main slot where silva content gets rendered-->
+					
+				{% endif  %}
+				
 			</div>
 
 			<!--End last modified info-->
