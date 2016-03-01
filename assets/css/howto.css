@@ -1,0 +1,14 @@
+.site-content__main article section > div {
+  width: 66%;
+  float: left;
+}
+.site-content__main article section > div:first-of-type {
+  width: 33%;
+}
+.site-content__main article section ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+.site-content__main article section li {
+  list-style-type: none;
+}
