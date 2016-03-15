@@ -16,21 +16,26 @@
 
         vm.logMe = logMe;
 
+        vm.updatePagination = updatePagination;
+        vm.updateFacet = updateFacet;
+        vm.isSelected = isSelected;
+        vm.updatePagination = updatePagination;
+
         getData();
 
         function logMe(x) {
-            console.log(x);
+          console.log(x);
         }
 
         function updatePagination(i) {
-            if(vm.currentPage !== i) {
-                returnToListings('','',i)
-                getData();
-            }
+          if(vm.currentPage !== i) {
+            reset(i)
+            getData();
+          }
         }
 
-        function isSelected(f) {
-            return arrayFactory.findItemInArray(f,vm.selectedFacets);
+        function isSelected(facetObj) {
+            return arrayFactory.findItemInArray(facetObj,vm.selectedFacets);
         }
 
         function updateFacet(facetData,facetQueryStringParam) {
@@ -42,12 +47,15 @@
                     ,queryStringParam: facetQueryStringParam
                 });
             }
-            vm.currentPage = 0;
-            vm.upi = '';
-            getData();
+            reset(0);
         }
         /* Private methods
         ---------------------------------------------------------------*/
+        function reset(i) {
+          vm.currentPage = i;
+          getData();
+        }
+
         function getData() {
             return howToService.getHowTos(vm)
                 .then(function(data) {
@@ -69,6 +77,7 @@
             for(i=1;i<=vm.pageCount;i++) {
                 vm.paginationArr.push(i);
             }
+            console.log(vm.resultsSummary);
         }
 
     }

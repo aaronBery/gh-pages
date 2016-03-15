@@ -20,24 +20,24 @@
         return service;
 
         function getHowTos(vm) {
-            var fbUrl = buildFbUrl(vm);
+          var fbUrl = buildFbUrl(vm);
 
-            return $http.jsonp(fbUrl).success(
-                        function(data, status, headers, config) {
-                        // this callback will be called asynchronously
-                        // when the response is available
-                            return data;
-                        }).
-                        error(function(data, status, headers, config) {
-                        // called asynchronously if an error occurs
-                        // or server returns response with an error status.
-                    });
+          return $http.jsonp(fbUrl).success(
+            function(data, status, headers, config) {
+              // this callback will be called asynchronously
+              // when the response is available
+              return data;
+            }).
+            error(function(data, status, headers, config) {
+              // called asynchronously if an error occurs
+              // or server returns response with an error status.
+            });
         }
 
         /* Private Methods
         ----------------------------------------------------------------------*/
         function buildFbUrl(vm) {
-            return "//" + fbInstance + ".ucl.ac.uk/s/search.json?collection=" + currentCollection + "&query=" + query + getMetaParams(vm.upi) + buildFacetsQryStr(vm.selectedFacets) + getStartRank(vm.currentPage,vm.numRanks) + angularCallback;
+          return "//" + fbInstance + ".ucl.ac.uk/s/search.json?collection=" + currentCollection + "&query=" + query + getMetaParams(vm.upi) + buildFacetsQryStr(vm.selectedFacets) + getStartRank(vm.currentPage,vm.numRanks) + angularCallback;
         }
 
         function buildFacetsQryStr(selectedFacets) {
@@ -45,7 +45,6 @@
             angular.forEach(selectedFacets, function(x,i) {
                 str += "&" + x.queryStringParam;
             });
-
             return str;
         }
         function getStartRank(currentPage,numRanks) {
