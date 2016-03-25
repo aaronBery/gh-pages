@@ -1,0 +1,36 @@
+@import "utils/colors";
+@import "base/components/bootstrap/typography";
+@import "base/components/bootstrap/images";
+@import "base/components/bootstrap/layout";
+
+.jumbotron {
+  background: $turquoise;
+  color: white;
+  p {
+    color: mix(white,grey,60);
+  }
+  .container {
+    position: relative;
+  }
+}
+.social-tray {
+  position: absolute;
+  bottom: -34px;
+  right: 0;
+  img {
+    padding-right: 1em;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+.row {
+  &--disclaimer-footer {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid;
+    p {
+      font-size: 0.8em;
+    }
+  }
+}
