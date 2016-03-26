@@ -13,6 +13,9 @@
     position: relative;
   }
 }
+.navbar-brand {
+  font-size: 2em;
+}
 .social-tray {
   position: absolute;
   bottom: -34px;
@@ -22,6 +25,10 @@
     &:last-child {
       padding-right: 0;
     }
+  }
+  @media only screen and (max-width: 767px) {
+    bottom: 0;
+    right: 1em;
   }
 }
 .row {
