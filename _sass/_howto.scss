@@ -3,9 +3,17 @@
 .site-content__main article section > div {
   width: 66%;
   float: left;
+  @media only screen 
+    and (max-width: 720px) {
+    width: 100%;
+  }
 }
 .site-content__main article section > div:first-of-type {
   width: 33%;
+  @media only screen 
+    and (max-width: 720px) {
+    width: 100%;
+  }
 }
 .site-content__main article section ul {
   padding-left: 0;
