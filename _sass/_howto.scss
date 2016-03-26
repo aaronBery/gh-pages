@@ -1,3 +1,5 @@
+@import 'utils/colors';
+
 .site-content__main article section > div {
   width: 66%;
   float: left;
@@ -22,6 +24,12 @@ ul {
   &.pagination {
     li {
       margin-bottom: 1em;
+      &.current {
+        background: $navy;
+        a {
+          color: white;
+        }
+      }
     }
   }
 }

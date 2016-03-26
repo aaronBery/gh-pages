@@ -22,11 +22,20 @@
         vm.isSelected = isSelected;
         vm.updatePagination = updatePagination;
         vm.updateQuery = updateQuery;
+        vm.isCurrentPage = isCurrentPage;
 
         getData();
 
         function logMe(x) {
           console.log(x);
+        }
+
+        function isCurrentPage(x) {
+          if(x === vm.currentPage) {
+            return true;
+          }else {
+            return false;
+          }
         }
 
         function updateQuery() {
