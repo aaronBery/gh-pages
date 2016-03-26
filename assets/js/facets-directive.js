@@ -9,7 +9,10 @@
         return {
             restrict: 'EA',
             template:   [
-              '<div class="faceted-navigation">'
+              '<form>',
+                '<input type="text" ng-model="vm.query" ng-change="vm.updateQuery()" placeholder="Search Term" />',
+              '</form>',
+              '<ul class="faceted-navigation">'
                 ,'<li ng-repeat="categories in vm.facets | filter: htmlToPlainText">'
                   ,'<section>'
                     ,'<h4>{{ categories.name  }}</h4>'
@@ -23,7 +26,7 @@
                     ,'</ul>'
                   ,'</section>'
                 ,'</li>'
-              ,'</div>' 
+              ,'</ul>' 
             ].join(''),
             controllerAs: 'vm',
             bindToController: true

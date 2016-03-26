@@ -13,6 +13,7 @@
         vm.selectedFacets = [];
         vm.currentPage = 0;
         vm.numRanks = 0;
+        vm.query = '';
 
         vm.logMe = logMe;
 
@@ -20,12 +21,18 @@
         vm.updateFacet = updateFacet;
         vm.isSelected = isSelected;
         vm.updatePagination = updatePagination;
+        vm.updateQuery = updateQuery;
 
         getData();
 
         function logMe(x) {
           console.log(x);
         }
+
+        function updateQuery() {
+          if(!vm.query.length || vm.query.length > 2)getData();
+        }
+
 
         function updatePagination(i) {
           if(vm.currentPage !== i) {
@@ -77,7 +84,6 @@
             for(i=1;i<=vm.pageCount;i++) {
                 vm.paginationArr.push(i);
             }
-            console.log(vm.resultsSummary);
         }
 
     }

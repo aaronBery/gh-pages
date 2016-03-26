@@ -11,7 +11,6 @@
         var fbInstance = "funnelback-dev";
         var angularCallback = "&jsonp=JSON_CALLBACK";
         var currentCollection = "isd-howto";
-        var query = "!padrenullquery";
 
         var service = {
             getHowTos: getHowTos
@@ -37,7 +36,7 @@
         /* Private Methods
         ----------------------------------------------------------------------*/
         function buildFbUrl(vm) {
-          return "//" + fbInstance + ".ucl.ac.uk/s/search.json?collection=" + currentCollection + "&query=" + query + getMetaParams(vm.upi) + buildFacetsQryStr(vm.selectedFacets) + getStartRank(vm.currentPage,vm.numRanks) + angularCallback;
+          return "//" + fbInstance + ".ucl.ac.uk/s/search.json?collection=" + currentCollection + "&query=" + sanitizeQuery(vm.query) + getMetaParams(vm.upi) + buildFacetsQryStr(vm.selectedFacets) + getStartRank(vm.currentPage,vm.numRanks) + angularCallback;
         }
 
         function buildFacetsQryStr(selectedFacets) {
@@ -56,6 +55,11 @@
             }else{
                 return "";
             }
+        }
+        function sanitizeQuery(str) {
+          if(!str.length)str = '!padrenullquery';
+
+          return str;
         }
     }
 })();

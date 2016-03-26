@@ -12,3 +12,21 @@
 .site-content__main article section li {
   list-style-type: none;
 }
+ul {
+  &.faceted-navigation {
+    margin-left: 0 !important;
+  }
+  &.result__items.result__items--web {
+    margin-left: 0;
+  }
+  &.pagination {
+    li {
+      margin-bottom: 1em;
+    }
+  }
+}
+section {
+  form {
+    margin-bottom: 1em;
+  }
+}
