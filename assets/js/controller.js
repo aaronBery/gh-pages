@@ -9,6 +9,8 @@
 
     function howToController($scope,howToService,arrayFactory,howToFactory) {
         var vm = this;
+        vm.facetFormObj = document.querySelectorAll('.how-to-facet-search');
+        vm.suggestionsObj = document.querySelectorAll('.suggestions');
         vm.results = [];
         vm.selectedFacets = [];
         vm.currentPage = 0;
@@ -29,6 +31,15 @@
           updateQuery();
         });
 
+        vm.facetFormObj.onmouseout = function() {
+          vm.suggestionsObj.style.display = none;
+        }
+
+        vm.facetFormObj.onmouseenter = function() {
+          vm.suggestionsObj.style.display = inline;
+        }
+
+
         function isCurrentPage(x) {
           if(x === vm.currentPage) {
             return true;
@@ -38,8 +49,9 @@
         }
 
         function updateQuery(updateBySuggestions) {
-          if(!vm.showSuggestions) {
+          if(typeof updateBySuggestions !== 'undefined' && updateBySuggestions) {
             vm.suggestions = [];
+            vm.showSuggestions = false;
           }else {
             getSuggestionsData();
           }

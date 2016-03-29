@@ -9,10 +9,10 @@
         return {
             restrict: 'EA',
             template:   [
-              '<form class="how-to-facet-search">'
-              , '<input type="text" ng-model="vm.query" placeholder="Search how to guides" />'
-              ,'<ul class="suggestions">'
-                ,'<li ng-repeat="suggestions in vm.suggestions" ng-click="vm.query = suggestions.disp; vm.showSuggestions = false" ng-show="vm.showSuggestions">'
+              '<form class="how-to-facet-search" ng-mouseleave="vm.showSuggestions = false">'
+              , '<input type="text" ng-model="vm.query" placeholder="Search how to guides" ng-change="vm.showSuggestions = true" />'
+              ,'<ul class="suggestions" ng-show="vm.showSuggestions">'
+                ,'<li ng-repeat="suggestions in vm.suggestions" ng-click="vm.query = suggestions.disp; vm.updateQuery(true)" ng-show="suggestions.disp!==vm.query">'
                   ,'{{ suggestions.disp  }}'
                 ,'</li>'
               ,'</ul>'
