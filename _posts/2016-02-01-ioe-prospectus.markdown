@@ -4,7 +4,7 @@ title:  "Institute of Education website"
 date:   2016-02-01 19:00:00 +0000
 categories: Backbone 
 ---
-<img src="/assets/images/ioe-prospectus.png" alt="IOE Prospectus" align="right" class="img-md"/>
+<img src="/assets/images/ioe-prospectus.png" alt="IOE Prospectus" class="img-md img-pull-right"/>
 
 UCL recently launched the new IOE website and at the cornerstone of the site
 was the new search facility.
