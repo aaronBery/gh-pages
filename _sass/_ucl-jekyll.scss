@@ -1,0 +1,78 @@
+@import 'utils/colors';
+
+.site-content__main article section > div {
+  width: 66%;
+  float: left;
+  @media only screen 
+    and (max-width: 720px) {
+    width: 100%;
+  }
+}
+.site-content__main article section > div:first-of-type {
+  width: 33%;
+  @media only screen 
+    and (max-width: 720px) {
+    width: 100%;
+  }
+}
+.site-content__main article section ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+.site-content__main article section li {
+  list-style-type: none;
+}
+ul {
+  &.faceted-navigation {
+    margin-left: 0 !important;
+  }
+  &.result__items.result__items--web {
+    margin-left: 0;
+  }
+  &.pagination {
+    li {
+      margin-bottom: 1em;
+      &.current {
+        background: $navy;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+section {
+  form {
+    margin-bottom: 1em;
+  }
+}
+.how-to-facet-search {
+  form {
+    position: relative;
+  }  
+  ul.suggestions {
+    position: relative;
+    background: white;
+    border: 1px solid $gray;
+    margin-left: 0;
+    padding: 0.5em;
+    box-sizing: border-box;
+    &:empty {
+      display: none;
+    }
+    li {
+      border-bottom: 1px dashed $gray;
+      cursor: pointer;
+      &:last-of-type {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+.post-list {
+  list-style-type: none;
+  ul {
+    margin-left: 0;
+    list-style-type: none;
+  }
+}
