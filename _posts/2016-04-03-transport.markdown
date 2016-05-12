@@ -12,5 +12,5 @@ to get this live soon. The applicaton is built using <strong>AngularJS</strong>
 which uses the style guide written by <a
 href="https://github.com/johnpapa/angular-styleguide/tree/master/a1">John
 Papaa</a>
-<a href="//www.ucl.ac.uk/transport-institute/find-an-expert-beta?search=uat"><img src="/assets/images/find-an-expert.png" alt="Find an Expert"
+<a href="//www.ucl.ac.uk/transport-institute/find-an-expert-beta?search=prod"><img src="/assets/images/find-an-expert.png" alt="Find an Expert"
 class="image-responsive image-responsive--medium" /></a>
