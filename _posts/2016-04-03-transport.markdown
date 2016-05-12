@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Transport Institute's Find an Expert"
+title:  "AngularJS - Transport Institute's Find an Expert"
 date:   2016-04-03 21:28:28 +0000
-categories: angular
+categories: Angular
 ---
 I have been working with the UCL Transport Insitute in building them a search
 facility for finding experts in the transport field. The application integrates
@@ -12,5 +12,5 @@ to get this live soon. The applicaton is built using <strong>AngularJS</strong>
 which uses the style guide written by <a
 href="https://github.com/johnpapa/angular-styleguide/tree/master/a1">John
 Papaa</a>
-<a href="//www.ucl.ac.uk/transport-institute/find-an-expert-beta"><img src="/assets/images/find-an-expert.png" alt="Find an Expert"
+<a href="//www.ucl.ac.uk/transport-institute/find-an-expert-beta?search=uat"><img src="/assets/images/find-an-expert.png" alt="Find an Expert"
 class="image-responsive image-responsive--medium" /></a>
